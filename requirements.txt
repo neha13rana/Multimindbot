@@ -1,0 +1,8 @@
+streamlit
+langchain
+langchain_community
+faiss-cpu
+sentence-transformers
+google-generativeai==0.5.2
+langchain-google-genai
+langchain-huggingface

@@ -22,7 +22,7 @@ text_chunks=text_splitter.split_documents(data)
 embeddings= HuggingFaceEmbeddings(model_name= "sentence-transformers/all-MiniLM-L6-v2",model_kwargs = {'device': 'cpu'},encode_kwargs = {'normalize_embeddings': True})
 db =FAISS.from_documents(text_chunks,embeddings)
 retriever =db.as_retriever(search_type="similarity", search_kwargs={"k":1})
-api_key='AIzaSyBoCW3JQBd9pKt55AOJBqqMQCeEfP6lcRo'
+api_key='AIzaSyB9lN8s_mrpwU5VcouCGofvYOks2PTpFkY'
 llm =GooglePalm(google_api_key=api_key,temperature=0.9)
 memory = ConversationBufferMemory(memory_key="history", input_key="question")
 template="""your name is multimind bot and you are here to assist the user to answer their quuery. when user say hello, hii or use any greeting then greet them with welcome message. when user say thank you related things then say a sweet message like you are welcome! i am happy and so and so. Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.Use three sentences maximum. Keep the answer as concise as possible.ask the question to user by the context for example if user asked about the which courses offered by the acpc then ask user if they want the details of that question if user say yes then provide them that details like wise if needed then ask the questionsto user.if you ask user and uesr say yes than give the answer of that question you asked.

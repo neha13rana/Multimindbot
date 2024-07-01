@@ -28,9 +28,9 @@ Question - Answer with chathistory :
 <hr>
 **Steps to use this website :**
 1) Download the project folder.
-2) set the environment in your code editor's CMD by writing  ![link](python -m venv venv) then write  ![link](venv\Scripts\activate)
+2) set the environment in your code editor's CMD by writing  !(python -m venv venv) then write  !(venv\Scripts\activate)
 if it is installed. 
-3) install requirements.txt by writing ![link](pip install -r requirements.txt)
-4) then write this command to run the app ![link](streamlit run app.py)
+3) install requirements.txt by writing !(pip install -r requirements.txt)
+4) then write this command to run the app !(streamlit run app.py)
 
-> **Note :** Do not forget to change the google palm api key with your api key if you download the app locally.  from here generate your key ![link](https://aistudio.google.com/app/apikey)
+> **Note :** Do not forget to change the google palm api key with your api key if you download the app locally.  from here generate your key !(https://aistudio.google.com/app/apikey)

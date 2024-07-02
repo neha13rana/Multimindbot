@@ -1,4 +1,4 @@
-# Multimindbot (https://multimindchatbot.streamlit.app/)
+# Multimindbot 
 Multimindbot is a chatbot which make your work easy user do not surf the whole website for finding the content or key dates. just ask your query to thr bot and get your answer.
 Multimindbot is created specially for the counselling related process to get admission in colleges just like 
 
@@ -33,4 +33,3 @@ if it is installed.
 3) install requirements.txt by writing !(pip install -r requirements.txt)
 4) then write this command to run the app !(streamlit run app.py)
 
-Use from the official website : (https://multimindchatbot.streamlit.app/)

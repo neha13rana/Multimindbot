@@ -1,7 +1,6 @@
 # Multimindbot 
-Multimindbot is a chatbot which make your work easy user do not surf the whole website for finding the content or key dates. just ask your query to thr bot and get your answer.
-Multimindbot is created specially for the counselling related process to get admission in colleges just like 
 
+Multimindbot is a chatbot that makes it easy for users to find content or key dates without having to search the entire website. Users simply need to ask their query and the bot will provide the answers. Multimindbot is designed specifically for the college admission counseling process.
 <hr>
 
 **Used technology in the project:**

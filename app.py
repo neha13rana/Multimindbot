@@ -11,6 +11,14 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import RetrievalQA
 from langchain_huggingface import HuggingFaceEmbeddings
 import streamlit as st 
+from langchain.memory import ConversationBufferMemory
+from langchain.chains import ConversationalRetrievalChain
+from langchain.llms import HuggingFaceHub
+from langchain.llms import CTransformers
+from langchain.prompts import PromptTemplate
+from langchain.chains import RetrievalQA
+from langchain_huggingface import HuggingFaceEmbeddings
+
 loader=CSVLoader(file_path="finalqa.csv" , encoding="utf-8" , csv_args={'delimiter': ','})
 data=loader.load()
 text_splitter = CharacterTextSplitter(
@@ -22,8 +30,17 @@ text_chunks=text_splitter.split_documents(data)
 embeddings= HuggingFaceEmbeddings(model_name= "sentence-transformers/all-MiniLM-L6-v2",model_kwargs = {'device': 'cpu'},encode_kwargs = {'normalize_embeddings': True})
 db =FAISS.from_documents(text_chunks,embeddings)
 retriever =db.as_retriever(search_type="similarity", search_kwargs={"k":1})
-api_key='AIzaSyB9lN8s_mrpwU5VcouCGofvYOks2PTpFkY'
-llm =GooglePalm(google_api_key=api_key,temperature=0.9)
+# api_key='AIzaSyB9lN8s_mrpwU5VcouCGofvYOks2PTpFkY'
+# llm =GooglePalm(google_api_key=api_key,temperature=0.9)
+config = {'max_new_tokens': 512,'context_length': 8000}
+llm = CTransformers(
+                    model='TheBloke/Llama-2-7B-Chat-GGUF',
+                    model_file="llama-2-7b-chat.Q4_K_S.gguf",
+                    config=config,
+                    model_type='llama',
+                    device = 'cpu',
+                    temprature=0.8 )
+
 memory = ConversationBufferMemory(memory_key="history", input_key="question")
 template="""your name is multimind bot and you are here to assist the user to answer their quuery. when user say hello, hii or use any greeting then greet them with welcome message. when user say thank you related things then say a sweet message like you are welcome! i am happy and so and so. Use the following pieces of context to answer the question at the end. If you don't know the answer, just say that you don't know, don't try to make up an answer.Use three sentences maximum. Keep the answer as concise as possible.ask the question to user by the context for example if user asked about the which courses offered by the acpc then ask user if they want the details of that question if user say yes then provide them that details like wise if needed then ask the questionsto user.if you ask user and uesr say yes than give the answer of that question you asked.
     if needed ask question to user by your self related to the query if you have long answer then ask user which specific question they need.

@@ -6,7 +6,7 @@ Multimindbot is created specially for the counselling related process to get adm
 
 **Used technology in the project:**
 1) Langchain
-2) LLM (Google Palm)
+2) LLM (Llama-2-7B-Chat-GGUF)
 3) Prompt Engineering
 4) Huggingface
 5) streamlit
@@ -34,5 +34,3 @@ if it is installed.
 4) then write this command to run the app !(streamlit run app.py)
 
 Use from the official website : (https://multimindbot.streamlit.app/)
-
-> **Note :** Do not forget to change the google palm api key with your api key if you download the app locally.  from here generate your key !(https://aistudio.google.com/app/apikey)

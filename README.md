@@ -36,6 +36,9 @@ Multimindbot is a chatbot that makes it easy for users to find content or key da
 
 ![image](https://github.com/neha13rana/Multimindbot/assets/121093178/8720a2ec-4b1d-4fe8-bdc7-1676a75ca63b)
 
+![WhatsApp Image 2024-07-03 at 18 50 28_2e9a2957](https://github.com/neha13rana/Multimindbot/assets/121093178/3af1d11f-78a9-4633-9716-21421ac88c98)
+
+
 <hr>
 
 **Model Architecture :** 

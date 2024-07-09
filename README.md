@@ -1,6 +1,7 @@
 # Multimindbot 
 
-Multimindbot is a chatbot that makes it easy for users to find content or key dates without having to search the entire website. Users simply need to ask their query and the bot will provide the answers. Multimindbot is designed specifically for the college admission counseling process.
+Multimindbot is a chatbot designed to help users find specific content without having to search through the entire website. It is specially tailored for the college admission counseling process and keeps a record of the chat history for the current session. The entire chatbot is created using Rag-langchain and Streamlit. The language model used is **Llama2**, which is open source, instead of using the API key for the LLM, compared with GPT-3.5, GooglePalm, and Ollama. **Llama2** provides accurate results. For the desired output generation, I use prompt engineering. Additionally, if a user has a specific query on a document, they can choose the option to chat with the chatbot or to discuss the uploaded document and subsequently inquire about the query based on the content of their document.
+
 <hr>
 
 **Used technology in the project:**
